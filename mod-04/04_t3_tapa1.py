@@ -1,16 +1,21 @@
-# Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka, 
-# kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi. 
-# Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
-pienin = float()
-suurin = float()
-print(pienin)
+pienin = ""
+suurin = ""
+print("\nSyötä lukuja, ohjelma kerää näistä suurimman ja pienimmän. \nPäätä ohjelma syöttämällä tyhjä merkkijono. \nLopussa ohjelma tulostaa syöttämistäsi luvuista pienimmän ja suurimman.\n")
 
 while 1:
-    x = input("Syötä luku: ")
-    if pienin == float():
-        pienin = x
-        suurin = x
-        print(type(pienin))
+    x = str(input("Syötä luku: "))
+    if x == "":
+        print("\nSyötit tyhjän merkkijonon, ohjelma päättyy.")
+        break
+    elif pienin == "":
+        pienin = float(x)
+        suurin = float(x)
+    elif float(pienin) > float(x):
+        pienin = float(x)
+    elif float(suurin) < float(x):
+        suurin = float(x)
 
-print(x)
-
+if type(pienin) == float:
+    print(f"\nPienin syöttämäsi luku on {pienin} ja suurin syöttämäsi luku on {suurin}\n")
+else: 
+    print("Et syöttänyt yhtään lukua.")
