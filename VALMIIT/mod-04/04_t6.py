@@ -8,6 +8,7 @@ loop = 0
 while N != loop:
     X = random.uniform(-1,1)
     Y = random.uniform(-1,1)
+    
     if X ** 2 + Y ** 2 < 1:
         n +=1
 
