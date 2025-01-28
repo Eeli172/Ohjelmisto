@@ -1,9 +1,9 @@
 import random
 
 arpakuutio_lkm = int(input("Anna arpakuutioiden lukumäärä: "))
-summa = 0
+arpakuutiot = []
 
 for i in range(arpakuutio_lkm):
-    summa += random.randint(1,6)
+    arpakuutiot.append(random.randint(1,6))
 
-print(f"{arpakuutio_lkm} kpl noppia heitetty, saatujen silmälukujen summa: {summa}")
+print(f"{len(arpakuutiot)} kpl noppia heitetty, saatujen silmälukujen summa: {sum(arpakuutiot)}")

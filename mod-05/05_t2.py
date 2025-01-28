@@ -1,7 +1,3 @@
-# Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka, kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi. 
-# Lopuksi ohjelma tulostaa saaduista luvuista viisi suurinta suuruusjärjestyksessä suurimmasta alkaen. 
-#   Vihje: listan alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True.
-
 lista = []
 syöte_str = str(input("Syötä ensimmäinen luku: "))
 
@@ -18,6 +14,6 @@ if len(lista) >= 5:
     for i in range(0,5):
         print(lista[i])
 else:
-    print(f"{len(lista)} suurinta syöttämääsi numeroa järjestettynä suurimmasta pienimpään")
+    print(f"Syötit {len(lista)} kpl numeroita, tässä numerot järjestettynä suurimmasta pienimpään:")
     for i in range(0,len(lista)):
         print(lista[i])
