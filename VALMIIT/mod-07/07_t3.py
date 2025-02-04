@@ -7,10 +7,15 @@ while ip != 3:
         icao = str(input("Syötä lentoaseman ICAO-koodi: "))
         nimi = str(input("Syötä lentoaseman nimi: "))
         db[icao] = nimi
-# Jos käyttäjän syöte on 2 == hän haluaa hakea sanakirjasta, niin hän pääsee hakemaan
+# Jos käyttäjän syöte on 2 == hän haluaa hakea sanakirjasta, niin hän pääsee hakemaan. 
     elif ip == 2:
         haku = str(input("Syötä haettavan lentoaseman ICAO-koodi: "))
-        print(db[haku])
+        # Jos käyttäjän hakema lentoasema löytyy sanakirjasta, se tulostetaan
+        if haku in db:
+            print(db[haku])
+        # Jos haku ei tuota tulosta, tästä informoidaan käyttäjää
+        else:
+            print("Kyseisen lentoaseman tietoja ei vielä ole syötetty. ")
 # Jos käyttäjä syöttää muuta, kun 1, 2, tai 3 niin hän saa palautetta virheellisestä syötteestä
     else:
         print("Annoit virheellisen syötteen, anna jokin seuraavista numeroista [1, 2, 3]")
