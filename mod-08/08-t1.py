@@ -1,35 +1,26 @@
-# Huom! Joillain käyttäjillä on ilmennyt yllättäviä haasteita uusimman MySQL-ajuriversion 8.0.30 kanssa. Jos törmäät virheilmoitukseen mysql.connector.errors.ProgrammingError: Character set 'utf8' unsupported, vaihda toiseksi uusimpaan ajuriversioon 8.0.29: Valitse PyCharmissa View/Tool Windows/Python Packages. Etsi hakutoiminnolla pakkaus mysql-connector-python. Poista version 8.0.30 asennus painamalla oikeassa laidassa olevaa kolmea pistettä ja valitsemalla Delete. Vaihda ajuriversioksi 8.0.29 Latest-valinnan tilalle ja asenna napsauttamalla Install.
-
-# Kirjoita ohjelma, joka kysyy käyttäjältä lentoaseman ICAO-koodin. 
-# Ohjelma hakee ja tulostaa koodia vastaavan lentokentän nimen ja sen sijaintikunnan kurssilla käytettävästä lentokenttätietokannasta. 
-# ICAO-koodi on tallennettuna airport-taulun ident-sarakkeeseen.
 import mysql.connector
 
-
-def hae_kentan_tiedot(icao):
-    sql = f"SELECT name FROM airport where ident='{icao}'"
-    print(sql)
+def lentoasema_haku(icao):
+    sql = f"select name, municipality, ident from airport where ident = '{icao}';"
     kursori = yhteys.cursor()
     kursori.execute(sql)
-    tulos = kursori.fetchall()
+    tulos = kursori.fetchone()
+
     if kursori.rowcount > 0:
-        for rivi in tulos:
-            print(f"Lentoaseman nimi on: {rivi[0]}")
+        print(f"ICAO-koodi: {tulos[2]}\nLentoaseman nimi: {tulos[0]}\nLentoaseman sijainti: {tulos[1]}")
     else:
-        print("ICAO-koodillasi ei löytynyt lentoasemaa.")
-    return
+        print(f"Haullasi '{icao}' ei löytynyt yhtään lentoasemaa. ")
 
-
-# pääohjelma
 yhteys = mysql.connector.connect(
-    host='127.0.0.1',
-    port= 3306,
-    database='flight_game',
-    # Huom: käyttäjän root salasana EI saa olla root!!!
-    user='root',
-    password='root',
-    autocommit=True
-    )
+    collation = "utf8mb4_general_ci",
+    host = '127.0.0.1',
+    port = 3306,
+    database = "flight_game",
+    user = "python",
+    password = "koulu123",
+    autocommit = True
+)
 
-icao_koodi = input("Anna lentoaseman ICAO-koodi: ")
-hae_kentan_tiedot(icao_koodi)
+haku = str(input("Syötä lentoaseman ICAO-koodi: "))
+lentoasema_haku(haku)
+

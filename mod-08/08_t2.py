@@ -1,5 +1,31 @@
-# Huom! Joillain käyttäjillä on ilmennyt yllättäviä haasteita uusimman MySQL-ajuriversion 8.0.30 kanssa. Jos törmäät virheilmoitukseen mysql.connector.errors.ProgrammingError: Character set 'utf8' unsupported, vaihda toiseksi uusimpaan ajuriversioon 8.0.29: Valitse PyCharmissa View/Tool Windows/Python Packages. Etsi hakutoiminnolla pakkaus mysql-connector-python. Poista version 8.0.30 asennus painamalla oikeassa laidassa olevaa kolmea pistettä ja valitsemalla Delete. Vaihda ajuriversioksi 8.0.29 Latest-valinnan tilalle ja asenna napsauttamalla Install.
-# 
-# Kirjoita ohjelma, joka kysyy käyttäjältä maakoodin (esimerkiksi FI) ja tulostaa kyseisessä maassa olevien lentokenttien lukumäärät tyypeittäin. 
-# Esimerkiksi Suomen osalta tuloksena on saatava tieto siitä, että pieniä lentokenttiä on 65 kappaletta, 
-# helikopterikenttiä on 15 kappaletta jne.
+import mysql.connector
+
+def airport_types(country):
+    sql = f"select type, iso_country from airport where iso_country = '{country}';"
+    kursori = yhteys.cursor()
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    # käydään rivit läpi, lisätään sanakirjaan kukin tyyppi ja lasketaan kuinka monta kertaa tyyppi ilmaantuu
+    numerot = {}
+    for rivi in tulos:
+        if rivi[0] in numerot:
+            numerot[rivi[0]] += 1
+        else:
+            numerot[rivi[0]] = 1
+    # tulostetaan sanakirjasta kukin tyyppi ja sitä vastaava lukumäärä
+    for i in numerot:
+        print(f'{i}: {numerot[i]}')
+
+    
+yhteys = mysql.connector.connect(
+    collation = "utf8mb4_general_ci",
+    host = '127.0.0.1',
+    port = 3306,
+    database = "flight_game",
+    user = "python",
+    password = "koulu123",
+    autocommit = True
+)
+
+inp = str(input("maakoodi: "))
+airport_types(inp)
