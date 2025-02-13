@@ -11,6 +11,7 @@ def lemmikin_omistaja(lemmikin_nimi):
             print(f"{rivi[0]} {rivi[1]}")
     else:
         print("Hakemaasi lemmikkiä ei löydy Ankkalinnasta.")
+        
 # Pääohjelma
 yhteys = mysql.connector.connect(
     collation = "utf8mb4_general_ci",
