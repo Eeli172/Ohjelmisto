@@ -1,6 +1,30 @@
-# Jatka ohjelmaa kirjoittamalla Auto-luokkaan kiihdytä-metodi, joka saa parametrinaan nopeuden muutoksen (km/h). 
-# Jos nopeuden muutos on negatiivinen, auto hidastaa. Metodin on muutettava auto-olion nopeus-ominaisuuden arvoa. 
-# Auton nopeus ei saa kasvaa huippunopeutta suuremmaksi eikä alentua nollaa pienemmäksi. 
-# Jatka pääohjelmaa siten, että auton nopeutta nostetaan ensin +30 km/h, sitten +70 km/h ja lopuksi +50 km/h. 
-# Tulosta tämän jälkeen auton nopeus. Tee sitten hätäjarrutus määräämällä nopeuden muutos -200 km/h ja tulosta uusi nopeus. 
-# Kuljettua matkaa ei tarvitse vielä päivittää.
+class Auto:
+    def __init__(self, rekisteritunnus, huippunopeus, nykyinen_nopeus=0, kuljettu_matka=0):
+        Auto.rekisteritunnus = rekisteritunnus
+        Auto.huippunopeus = huippunopeus
+        Auto.nykyinen_nopeus = nykyinen_nopeus
+        Auto.kuljettu_matka = kuljettu_matka
+
+    def kiihdytä(self, nopeuden_muutos):
+        if self.nykyinen_nopeus + nopeuden_muutos < 0:# jos nopeus menisi alle 0, muutetaan nyk.nopeus -> 0
+            self.nykyinen_nopeus = 0 
+        elif self.nykyinen_nopeus + nopeuden_muutos > self.huippunopeus:# jos nopeus menisi yli huippunopeuden, muutetaan nyk.nopeus -> huippunopeus
+            self.nykyinen_nopeus = self.huippunopeus
+        else:# muuten lisätään nopeuden muutos nykyiseen nopeuteen
+            self.nykyinen_nopeus += nopeuden_muutos
+
+
+def pääohjelma():
+    auto_lista = []
+    auto_lista.append(Auto("ABC-123", 142))
+
+    auto_lista[0].kiihdytä(30)
+    auto_lista[0].kiihdytä(70)
+    auto_lista[0].kiihdytä(50)
+    print(auto_lista[0].nykyinen_nopeus)
+    auto_lista[0].kiihdytä(-200)
+    print(auto_lista[0].nykyinen_nopeus)
+
+
+
+pääohjelma()
