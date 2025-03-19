@@ -1,7 +1,3 @@
-
-
-# Kilpailu jatkuu, kunnes jokin autoista on edennyt vähintään 10000 kilometriä. 
-# Lopuksi tulostetaan kunkin auton kaikki ominaisuudet selkeäksi taulukoksi muotoiltuna.
 import random
 
 class Auto:
