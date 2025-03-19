@@ -31,7 +31,7 @@ class Auto:
 
 def pääohjelma():
     auto_lista = []
-    
+
     for i in range(1,11):
         auto_lista.append(Auto(f"ABC-{i}", int(random.randint(100, 200))))
 
@@ -43,7 +43,7 @@ def pääohjelma():
             auto.kulje(1)
 
             if auto.kuljettu_matka >= 10000:# jos auton kulkema matka on 10000 km tai yli, voittaja julistetaan ja looppi suljetaan
-                print(f'Auto {auto.rekisteritunnus} voitti kilpailun!')
+                print(f'{auto.rekisteritunnus} voitti kilpailun!')
                 kilpailu_käynnissä = False
 
 
