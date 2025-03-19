@@ -29,16 +29,17 @@ def pääohjelma():
     while kilpailu_käynnissä:
 
         for auto in auto_lista:# muutetaan vuorollaan kunkin auton nopeus ja kuljettu matka 
-            auto.kiihdytä(int(random.randint(-10, 15)))
-            auto.kulje(1)
+            if kilpailu_käynnissä:
+                auto.kiihdytä(int(random.randint(-10, 15)))
+                auto.kulje(1)
 
             if auto.kuljettu_matka >= 10000:# jos auton kulkema matka on 10000 km tai yli, voittaja julistetaan ja looppi suljetaan
-                print(f'{auto.rekisteritunnus} voitti kilpailun!')
+                print(f'\n{auto.rekisteritunnus} voitti kilpailun!')
                 kilpailu_käynnissä = False
 
     # tilastojen tulostus
-    print("\nrek.nro.    huippunopeus    kuljettu matka\n")
+    print("\n\nrek.nro.    huippunopeus    kuljettu matka\n")
     for auto in auto_lista:
-        print(auto.rekisteritunnus, "     ", auto.huippunopeus, "           ", auto.kuljettu_matka)
+        print(auto.kuljettu_matka, "     ", auto.huippunopeus, "           ", auto.rekisteritunnus)
 
 pääohjelma()
