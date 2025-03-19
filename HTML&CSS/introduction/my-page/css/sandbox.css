@@ -7,5 +7,10 @@ html {
 }
 
 p {
-    color: rgb(141, 0, 0);
+    color: rgb(168, 0, 0);
+}
+
+q {
+    color: rgb(255, 0, 51);
+    font-size: 17px;
 }
