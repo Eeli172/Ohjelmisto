@@ -1,9 +1,9 @@
 class Auto:
     def __init__(self, rekisteritunnus, huippunopeus, nykyinen_nopeus=0, kuljettu_matka=0):
-        Auto.rekisteritunnus = rekisteritunnus
-        Auto.huippunopeus = huippunopeus
-        Auto.nykyinen_nopeus = nykyinen_nopeus
-        Auto.kuljettu_matka = kuljettu_matka
+        self.rekisteritunnus = rekisteritunnus
+        self.huippunopeus = huippunopeus
+        self.nykyinen_nopeus = nykyinen_nopeus
+        self.kuljettu_matka = kuljettu_matka
 
 def pääohjelma():
     auto_lista = []
