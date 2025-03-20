@@ -47,7 +47,7 @@ class Kilpailu:
     def kilpailu_ohi(self):
         for auto in self.auto_lista:
             if auto.kuljettu_matka >= self.pituus_km:# jos auto on kulkenut kilpailun pituuden verran, voittaja julistetaan ja looppi suljetaan
-                print(f'\n{auto.rekisteritunnus} voitti kilpailun!')
+                print(f'\n{auto.rekisteritunnus} voitti kilpailun!'.upper())
                 return True
             else: return False
 

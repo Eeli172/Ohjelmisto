@@ -42,14 +42,14 @@ class Talo:
                 hissi = self.hissit[hissi_nro-1]
 
                 if hissi_nro < 1 or hissi_nro > len(self.hissit):# jos kyseistä hissiä ei ole
-                    print(f"\nHissiä nro. {hissi_nro} ei ole vielä rakennettu.")
+                    print(f"\nHissiä nro. {hissi_nro} ei ole vielä rakennettu.".upper())
         
                 else:# jos kyseinen hissi on olemassa
-                    print(f'\nMenit hissiin nro. {hissi_nro}, olet kerroksessa {hissi.nyk_kerros}')
+                    print(f'\nMenit hissiin nro. {hissi_nro}, olet kerroksessa {hissi.nyk_kerros}'.upper())
                     hissi.siirry_kerrokseen(päämäärä)
 
             except IndexError:
-                print(f"\nHissiä nro. {hissi_nro} ei ole vielä rakennettu.")
+                print(f"\nHissiä nro. {hissi_nro} ei ole vielä rakennettu.".upper())
     
     def palohälytys(self):
         print("\n   P A L O   H Ä L Y T Y S !\n")
