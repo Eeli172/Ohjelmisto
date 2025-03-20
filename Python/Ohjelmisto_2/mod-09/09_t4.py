@@ -2,11 +2,11 @@ import random
 from prettytable import PrettyTable
 
 class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus, nykyinen_nopeus=0, kuljettu_matka=0):
+    def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.nykyinen_nopeus = nykyinen_nopeus
-        self.kuljettu_matka = kuljettu_matka
+        self.nykyinen_nopeus = 0
+        self.kuljettu_matka = 0
 
     def kiihdytä(self, nopeuden_muutos):
         if self.nykyinen_nopeus + nopeuden_muutos < 0:# jos nopeus menisi alle 0, muutetaan nyk.nopeus -> 0
