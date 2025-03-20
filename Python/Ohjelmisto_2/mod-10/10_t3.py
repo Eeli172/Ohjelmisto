@@ -1,6 +1,3 @@
-# Jatka edellisen tehtävän ohjelmaa siten, että Talo-luokassa on parametriton metodi palohälytys, joka käskee kaikki hissit pohjakerrokseen. 
-# Jatka pääohjelmaa siten, että talossasi tulee palohälytys.
-
 class Hissi:
     def __init__(self, min_kerros, max_kerros):
         self.min_kerros = min_kerros
@@ -53,7 +50,30 @@ class Talo:
 
             except IndexError:
                 print(f"\nHissiä nro. {hissi_nro} ei ole vielä rakennettu.")
+    
+    def palohälytys(self):
+        print("\n   P A L O   H Ä L Y T Y S !\n")
+        laskuri = 1
+        for hissi in self.hissit:
+            hissi.siirry_kerrokseen(hissi.min_kerros)
+            print(f'   Hissi {laskuri} ajettu alas\n'.upper())
+            laskuri += 1
 
 
 
 # pääohjelma
+toimistorakennus = Talo(0, 15, 5)
+
+toimistorakennus.aja_hissiä(1, 13)
+
+
+toimistorakennus.aja_hissiä(2, 4)
+toimistorakennus.aja_hissiä(3, 6)
+
+
+toimistorakennus.aja_hissiä(4, 1)
+
+
+toimistorakennus.aja_hissiä(5, 2)
+
+toimistorakennus.palohälytys()
