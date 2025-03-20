@@ -41,6 +41,9 @@ def pääohjelma():
     # tilastojen muotoilu ja tulostus
     tulostus = PrettyTable()
     tulostus.field_names = ["Rekisteritunnus", "Huippunopeus km/h", "Kuljettu matka km"]
+
+    auto_lista.sort(key = lambda a: a.kuljettu_matka, reverse=True)
+    
     for auto in auto_lista:
         tulostus.add_row([auto.rekisteritunnus, auto.huippunopeus, auto.kuljettu_matka])
     print(tulostus)
