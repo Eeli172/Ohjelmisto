@@ -1,4 +1,5 @@
 import random
+from prettytable import PrettyTable
 
 class Auto:
     def __init__(self, rekisteritunnus, huippunopeus, nykyinen_nopeus=0, kuljettu_matka=0):
@@ -37,9 +38,13 @@ def pääohjelma():
                 print(f'\n{auto.rekisteritunnus} voitti kilpailun!')
                 kilpailu_käynnissä = False
 
-    # tilastojen tulostus
-    print("\n\nrek.nro.    huippunopeus    kuljettu matka\n")
+    # tilastojen muotoilu ja tulostus
+    tulostus = PrettyTable()
+    tulostus.field_names = ["Rekisteritunnus", "Huippunopeus km/h", "Kuljettu matka km"]
     for auto in auto_lista:
-        print(auto.kuljettu_matka, "     ", auto.huippunopeus, "           ", auto.rekisteritunnus)
+        tulostus.add_row([auto.rekisteritunnus, auto.huippunopeus, auto.kuljettu_matka])
+    print(tulostus)
+
+
 
 pääohjelma()
