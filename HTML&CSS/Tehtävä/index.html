@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <title>Homepage</title>
   <meta charset="UTF-8">
@@ -9,46 +10,78 @@
   <link href="./css/style.css" rel="stylesheet">
   <link rel="icon" href="image/logo.ico" type="image/x-icon">
 </head>
-<body>
+
+<body id="index">
   <div class="container">
     <header>
-      <a href="index.html">
+      <a href="index.html" id="logo_link">
         <img src="image/logo.png" width="70" alt="some description">
       </a>
       <nav>
-        <p>Home</p>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <ul>
+          <li><a href=# id="current_page">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <h1>Homepage (Main header)</h1>
+      <h1 id="h1">Homepage</h1>
+      <p id="main_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tempore, ex soluta non quod
+        deleniti reiciendis consequatur. Voluptate nostrum veritatis minima, reprehenderit facere aliquid quasi minus
+        sequi exercitationem molestias corporis.</p>
       <section>
-        <h2>Section header</h2>
         <article>
           <h3>Article header</h3>
           <p>Welcome to my exciting homepage</p>
-          <img src="https://placehold.co/300x200" alt="Placeholder image">         
+          <figure>
+            <img src="https://placehold.co/300x200" alt="Placeholder image">
+            <figcaption>Caption about the image</figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nisi facilis sit, pariatur asperiores
+            esse ratione sint, nostrum itaque commodi ullam repudiandae consequuntur eius cupiditate laboriosam vitae
+            sequi sunt assumenda?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aspernatur eos, nulla dicta unde maiores
+            odio ipsum eaque consequatur praesentium iure fugit, cumque tempore suscipit autem, molestias ab optio
+            sapiente?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae aliquam voluptatum excepturi
+            animi illum libero? Reprehenderit, ipsum labore? Perspiciatis quidem voluptatum animi doloremque sed neque
+            quo eos, voluptatibus minus.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nisi facilis sit, pariatur asperiores
+            esse ratione sint, nostrum itaque commodi ullam repudiandae consequuntur eius cupiditate laboriosam vitae
+            sequi sunt assumenda?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aspernatur eos, nulla dicta unde maiores
+            odio ipsum eaque consequatur praesentium iure fugit, cumque tempore suscipit autem, molestias ab optio
+            sapiente?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae aliquam voluptatum excepturi
+            animi illum libero? Reprehenderit, ipsum labore? Perspiciatis quidem voluptatum animi doloremque sed neque
+            quo eos, voluptatibus minus.</p>
         </article>
       </section>
       <aside>
         <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+          <li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <p>Debitis incidunt modi odio eveniet, perferendis labore quidem!</p>
+          </li>
+          <li>
+            <p>Laborum placeat, recusandae optio quam inventore voluptatum totam itaque adipisci.</p>
+          </li>
         </ol>
       </aside>
     </main>
     <footer>
-      <form action="#">
-        <h3>Subscribe to our newsletter</h3>
-        <input type="email" name="email" placeholder="Your email address">
-        <input type="submit" value="Send">        
-      </form>
       <a href="index.html">
         <img src="image/logo.png" width="70" alt="some description">
       </a>
+      <form action="#">
+        <h3>Subscribe to our newsletter</h3>
+        <input type="email" name="email" placeholder="Your email address">
+      </form>
     </footer>
   </div>
 </body>
+
 </html>

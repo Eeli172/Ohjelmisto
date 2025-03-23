@@ -6,66 +6,255 @@ html {
 }
 
 body {
-    background-color:hsla(0, 0%, 0%, 0.1) ;
+    margin: 0;
 }
 
 .container {
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
 header {
-    background-color:hsla(0, 0%, 0%, 0.6) ;
+    background-color: #222019;
+    display: flex;
+    height: 5rem;
+    border-bottom: 1px #daa520ac solid;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-header a {
+#logo_link {
     text-decoration: none;
+    width: 20%;
+    align-self: center;
+    margin: 1rem;
 }
 
-nav {
-    display: inline-block;
+header nav {
+    color: #bbbb9d;
+    width: 94%;
+    align-self: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    width: calc(100% / 3);
+    margin: 0
+}
+
+#current_page {
+    background-color: #55503e;
+    cursor: auto;
     color: #bbbb9d;
 }
 
-nav p {
-    display: inline;
-    background-color: hwb(0 100% 0% / 0.2);
-}
-
-nav a {
+ul a {
     text-decoration: none;
+    font-size: 17px;
     color: #bbbb9d;
-    background-color: hwb(0 100% 0% / 0.1);
+    display: block;
+    width: 100%;
+    line-height: 5rem;
+    text-align: center;
 }
 
-nav a:hover {
-    background-color:hsla(0, 0%, 0%, 0.8) ;
-    color: #ffffff;
+li a:hover {
+    background-color: hsla(0, 0%, 100%, 0.459);
+    color: antiquewhite;
 }
 
 main {
-    background-color:hsla(0, 0%, 0%, 0.4) ;
+    background-color: hsla(0, 0%, 0%, 0.137);
+    padding: 0;
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#main_paragraph {
+    margin: 2rem;
+    margin-top: 0;
 }
 
 section {
-    background-color: rgba(0, 255, 170, 0.192);
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-radius: 10px;
+    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section h2 {
+    width: 100%;
+    margin-left: 1rem;
+}
+
+section img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
 }
 
 article {
-    background-color: rgba(137, 43, 226, 0.199);
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#products article {
+    width: 100%;
+}
+
+#odd {
+    border-bottom: 2px #daa520ac double;
+}
+
+#last_odd {
+    border-bottom: 2px #daa520ac double;
+}
+
+#even {
+    border-bottom: 2px #daa520ac double;
+}
+
+figure {
+    margin: 0.3rem 1rem 0 0;
+    float: left;
+    color: rgba(255, 208, 150, 0.856);
+}
+
+figcaption {
+    padding: 1rem;
+    padding-left: 0;
+}
+
+aside {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    padding-right: 1rem;
+    box-sizing: border-box;
 }
 
 footer {
-    background-color:hsla(0, 0%, 0%, 0.6) ;
+    background-color: #222019;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-top: 1px #daa520ac solid;
 }
 
 footer a {
     text-decoration: none;
+    width: 20%
 }
 
 footer form {
-    display: inline;
+    width: 60%;
+    margin: auto;
 }
-footer p {
-    display: inline;
+
+form input {
+    color: #a1a17f;
+    border-radius: 10px;
+    background-color: #55503e;
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 80%;
+    }
+
+    header {
+        width: 80%;
+    }
+
+    #logo_link {
+        width: 6%;
+    }
+
+    header nav {
+        width: 50%;
+        position: absolute;
+        right: 5%;
+    }
+
+    ul li {
+        margin: 0;
+    }
+
+    ul a {
+        background-color: #ffffff0c;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    #h1 {
+        text-align: left;
+        margin-left: 2rem;
+    }
+
+    #product_paragraph {
+        width: 80%;
+    }
+
+    section {
+        width: 78%;
+        margin: 0rem;
+    }
+
+    aside {
+        width: 20%;
+        margin: 0;
+        margin-left: 1rem;
+        padding-right: 1%;
+        box-sizing: border-box;
+    }
+
+    header a {
+        width: 50%;
+        margin-left: 1rem;
+        font-size: 20px;
+
+    }
+
+    #products article {
+        width: 50%;
+    }
+
+    #even {
+        border-bottom: 1px #daa520ac solid;
+    }
+
+    #odd {
+        border-right: 1px #daa520ac solid;
+        border-bottom: 1px #daa520ac solid;
+    }
+
+    #last_odd {
+        border-right: 1px #daa520ac solid;
+        border-bottom: none;
+    }
 }
