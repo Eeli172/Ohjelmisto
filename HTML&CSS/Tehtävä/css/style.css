@@ -12,6 +12,8 @@ body {
 .container {
     width: 100%;
     margin: auto;
+    min-height: 100vh;
+    position: relative;
 }
 
 header {
@@ -30,6 +32,7 @@ header {
     width: 20%;
     align-self: center;
     margin: 1rem;
+    box-sizing: border-box;
 }
 
 header nav {
@@ -57,6 +60,7 @@ ul li {
     background-color: #55503e;
     cursor: auto;
     color: #bbbb9d;
+    box-shadow: 0px 0px 15px 17px #222019 inset;
 }
 
 ul a {
@@ -72,21 +76,39 @@ ul a {
 li a:hover {
     background-color: hsla(0, 0%, 100%, 0.459);
     color: antiquewhite;
+    box-shadow: 0px 0px 15px 17px #222019 inset;
 }
 
 main {
     background-color: hsla(0, 0%, 0%, 0.137);
     padding: 0;
-    margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 12rem;
+    min-height: calc(100vh - 11rem);
 }
 
 h1 {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 7rem;
     margin-bottom: 2rem;
     text-align: center;
+}
+#index h1 {
+    margin-top: 13rem;
+    text-align: center;
+    
+}
+#index p {
+    text-align: center;
+
+}
+#index main img {
+    position: absolute;
+    top: 35%;
+    width: calc(100% - 2rem);
+    align-content: center;
+    box-shadow: 0px 0px 50px 0px #daa520ac;
 }
 
 #main_paragraph {
@@ -97,10 +119,12 @@ h1 {
 section {
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
-    border-radius: 10px;
     margin: 0.5rem;
+    margin-bottom: 4rem;
+    border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
@@ -116,12 +140,10 @@ section img {
 
 article {
     padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     width: 100%;
     box-sizing: border-box;
-}
-
-#products article {
-    width: 100%;
 }
 
 #odd {
@@ -154,61 +176,69 @@ aside {
     border-radius: 10px;
     padding-right: 1rem;
     box-sizing: border-box;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2) inset;
 }
 
 footer {
     background-color: #222019;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 7rem;
     padding: 1rem;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     border-top: 1px #daa520ac solid;
 }
 
-footer a {
-    text-decoration: none;
-    width: 20%
+footer form {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 
-footer form {
-    width: 60%;
-    margin: auto;
+form h3 {
+    position: relative;
+    left: 1rem;
 }
 
 form input {
     color: #a1a17f;
     border-radius: 10px;
     background-color: #55503e;
+    position: relative;
+    left:5rem;
 }
 
 @media screen and (min-width: 769px) {
+
     .container {
         width: 80%;
     }
 
     header {
         width: 80%;
+        border-radius: 0 0 3px 3px;
     }
+
+    header nav {
+        width: 85%;
+        position: absolute;
+        right: 0;
+    }
+
 
     #logo_link {
         width: 6%;
     }
 
-    header nav {
-        width: 50%;
-        position: absolute;
-        right: 5%;
-    }
-
-    ul li {
-        margin: 0;
-    }
-
-    ul a {
-        background-color: #ffffff0c;
-    }
 
     main {
         padding: 1rem;
+        padding-bottom: 10rem;
+        box-shadow: 0px 0px 15px 0px #daa520ac, 0px 0px 5px 0px #daa520ac inset;
     }
 
     #h1 {
@@ -216,32 +246,26 @@ form input {
         margin-left: 2rem;
     }
 
-    #product_paragraph {
-        width: 80%;
-    }
-
     section {
-        width: 78%;
+        width: 77.3%;
         margin: 0rem;
     }
 
+    article {
+        padding: 1rem;
+        width:100%;
+        box-sizing: border-box;
+    }
+    
+    #products article {
+        width: 50%;
+    }
     aside {
         width: 20%;
         margin: 0;
         margin-left: 1rem;
         padding-right: 1%;
         box-sizing: border-box;
-    }
-
-    header a {
-        width: 50%;
-        margin-left: 1rem;
-        font-size: 20px;
-
-    }
-
-    #products article {
-        width: 50%;
     }
 
     #even {
@@ -256,5 +280,8 @@ form input {
     #last_odd {
         border-right: 1px #daa520ac solid;
         border-bottom: none;
+    }
+    footer {
+        border-radius: 2px 2px 0 0;
     }
 }
