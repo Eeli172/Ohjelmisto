@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     margin: auto;
     min-height: 100vh;
     position: relative;
@@ -24,7 +24,7 @@ header {
     padding: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
 }
 
 #logo_link {
@@ -60,7 +60,7 @@ ul li {
     background-color: #55503e;
     cursor: auto;
     color: #bbbb9d;
-    box-shadow: 0px 0px 15px 17px #222019 inset;
+    box-shadow: 0px 0px 15px 20px #222019 inset;
 }
 
 ul a {
@@ -76,7 +76,7 @@ ul a {
 li a:hover {
     background-color: hsla(0, 0%, 100%, 0.459);
     color: antiquewhite;
-    box-shadow: 0px 0px 15px 17px #222019 inset;
+    box-shadow: 0px 0px 15px 20px #222019 inset;
 }
 
 main {
@@ -93,34 +93,34 @@ h1 {
     margin-top: 7rem;
     margin-bottom: 2rem;
     text-align: center;
-    height:2rem;
+    height: 2rem;
 }
+
 #index h1 {
     font-size: 40px;
-    margin: 0;
-    margin-top: 13rem;
-    text-align: center;
-    
-}
-#index p {
-    text-align: center;
-    margin-top: 0;
+    margin-top: 9rem;
     margin-bottom: 0;
-    padding: 0;
-
 }
+
 #index main img {
-    width: 100%;
+    width: 100vw;
     height: auto;
-    margin:0;
-    margin-bottom: 2.5rem;
-    align-content: center;
-    box-shadow: 0px 0px 50px 0px #daa520ac;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px #daa520ac;
+    position: absolute;
+    top: 30%;
 }
 
 #main_paragraph {
     margin: 2rem;
     margin-top: 0;
+}
+
+#index p {
+    text-align: center;
+    margin: 6rem;
+    position: relative;
+    top: 3rem;
 }
 
 section {
@@ -152,9 +152,22 @@ article {
     width: 100%;
     box-sizing: border-box;
 }
-#contact section{
+
+#contact section {
     width: 100%;
 }
+
+#contact figure {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+#contact p {
+    text-align: center;
+    margin: 2rem;
+}
+
 #odd {
     border-bottom: 2px #daa520ac double;
 }
@@ -188,11 +201,16 @@ aside {
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2) inset;
 }
 
+aside p {
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
 footer {
     background-color: #222019;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     min-height: 7rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -205,6 +223,7 @@ footer form {
     width: 100%;
     margin: auto;
     display: flex;
+    font-size: 15px;
     align-items: center;
 }
 
@@ -217,8 +236,7 @@ form input {
     color: #a1a17f;
     border-radius: 10px;
     background-color: #55503e;
-    position: relative;
-    left:5rem;
+    max-width: 60%
 }
 
 @media screen and (min-width: 769px) {
@@ -247,12 +265,35 @@ form input {
     main {
         padding: 1rem;
         padding-bottom: 10rem;
-        box-shadow: 0px 0px 15px 0px #daa520ac, 0px 0px 5px 0px #daa520ac inset;
+        box-shadow: 0px 0px 25px -10px #daa520ac;
+    }
+
+    #contact main {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     #h1 {
         text-align: left;
         margin-left: 2rem;
+    }
+
+    #index h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #index main img {
+        width: calc(100% - 2rem);
+        height: auto;
+        box-shadow: 0px 0px 10px 0px #daa520ac;
+    }
+
+    #index p {
+        text-align: center;
+        margin: 6rem;
+        font-size: 20px;
     }
 
     section {
@@ -262,13 +303,14 @@ form input {
 
     article {
         padding: 1rem;
-        width:100%;
+        width: 100%;
         box-sizing: border-box;
     }
-    
+
     #products article {
         width: 50%;
     }
+
     aside {
         width: 20%;
         margin: 0;
@@ -290,7 +332,30 @@ form input {
         border-right: 1px #daa520ac solid;
         border-bottom: none;
     }
+
     footer {
         border-radius: 2px 2px 0 0;
+        width: 100%;
     }
+
+    footer form {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+    }
+
+    form h3 {
+        position: relative;
+        left: 1rem;
+    }
+
+    form input {
+        color: #a1a17f;
+        border-radius: 10px;
+        background-color: #55503e;
+        max-width: 60%
+    }
+
 }
