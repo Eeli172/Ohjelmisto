@@ -1,6 +1,5 @@
 import requests
-
-api_key = "55c711f6d57383bc1d3e3c07b019180d"
+from OpenWeatherMap_Token import api_key
 
 
 location = input("Sijainti: ")
