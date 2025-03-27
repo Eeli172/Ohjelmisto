@@ -6,10 +6,11 @@ html {
 
 body {
     margin: 0;
+    width: 100vw;
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
     margin: auto;
     min-height: 100vh;
     position: relative;
