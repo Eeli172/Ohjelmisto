@@ -1,23 +1,26 @@
-html {
-    background-color: #55503e;
-    color: #e8d6a0;
-    font-size: 15px;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 body {
-    margin: 0;
-    width: 100vw;
+    background-color: #55503e;
+    color: #e8d6a0;
+    font-size: 15px;
+    position: relative;
 }
 
 .container {
     width: 100%;
-    margin: auto;
     min-height: 100vh;
-    position: relative;
+    margin: auto;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
+    position: relative;
+    box-sizing: border-box;
 }
 
 
@@ -25,15 +28,15 @@ body {
 
 header {
     background-color: #222019;
-    display: flex;
-    margin: auto;
-    height: 5rem;
     border-bottom: 1px #daa520ac solid;
+    height: 5rem;
+    width: 100%;
     padding: 0;
+    margin: auto;
+    display: flex;
     position: fixed;
-    top: 0;
     left: 0;
-    width: 100vw;
+    top: 0;
 }
 
 #logo_link {
@@ -49,11 +52,14 @@ header nav {
 }
 
 nav ul {
-    display: flex;
+    width: 85%;
     list-style-type: none;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    display: flex;
     padding: 0;
     margin: 0;
 }
@@ -65,21 +71,21 @@ ul li {
 
 #current_page {
     background-color: #55503ed6;
-    cursor: auto;
     color: #e0e0b8;
     box-shadow: 0px 0px 17px 17px #222019 inset;
+    cursor: auto;
 }
 
 ul a {
+    width: 100%;
+    background-color: #55503e48;
+    color: #cfcf9b;
+    box-shadow: 0px 0px 20px 25px #222019 inset;
     text-decoration: none;
     font-size: 17px;
-    color: #cfcf9b;
-    display: block;
-    width: 100%;
-    line-height: 5rem;
     text-align: center;
-    background-color: #55503e48;
-    box-shadow: 0px 0px 20px 25px #222019 inset;
+    display: block;
+    line-height: 5rem;
 }
 
 li a:hover {
@@ -92,18 +98,20 @@ li a:hover {
 /* Main **************************************************/
 
 main {
+    min-height: 100vh;
     background-color: hsla(0, 0%, 0%, 0.15);
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 3rem;
-    min-height: calc(100vh - 9.8rem);
+    padding: 0;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+
 }
 
 #index main {
+    padding: 0;
     flex-direction: column;
     align-items: center;
-    padding: 0;
 }
 
 h1 {
@@ -121,11 +129,10 @@ h1 {
 }
 
 #index main img {
-    width: 100vw;
+    width: calc(100% - 2rem);
     height: auto;
-    margin-top: 5rem;
-    position: relative;
-    bottom: 10%;
+    margin: 5rem auto 0 auto;
+
     box-shadow: 0px 0px 10px 0px #daa520ac;
 }
 
@@ -223,6 +230,7 @@ figcaption {
 aside {
     background-color: rgba(0, 0, 0, 0.1);
     margin: 0.5rem;
+    margin-bottom: 2rem;
     width: 100%;
     border-radius: 10px;
     padding-right: 1rem;
@@ -240,64 +248,86 @@ aside p {
 
 footer {
     background-color: #222019;
-    width: 100vw;
-    min-height: 5rem;
-    padding: 1.5rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
     box-sizing: border-box;
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     border-top: 1px #daa520ac solid;
+    position: absolute;
+    bottom: 0;
 }
 
 footer form {
     width: 100%;
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 15px;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
 }
 
 form h2,
 form h3 {
     font-size: large;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #cfcf9be1;
+    height: auto;
+    width: 100%;
+    color: #daa520;
+    margin: auto;
+    width: fit-content;
+    display: block;
 }
 
 form input {
-    color: #cfcf9b;
-    border-radius: 10px;
-    background-color: #55503e;
-    border: 1px solid #cfcf9be1;
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 0.5rem;
+    background-color: #daa5202c;
+    color: #daa520;
+    font-size: 14px;
+    border: 1px solid #daa520ac;
+    box-shadow:  0px 0px 15px -5px #daa520ac;
+    border-radius: 20px;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-left: calc(50% - 7.5rem);
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: 11rem;
+}
+
+input:focus{
+    background-color: #222019;
+    box-shadow:  0px 0px 25px 0px #daa520;
 }
 
 ::placeholder {
-    color: #cfcf9bb3;
+    color: #daa520ac;
+    font-size: 14px;
 }
 
 form button {
-    color: #cfcf9be1;
-    background-color: #55503e;
-    border: 1px solid #cfcf9be1;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
+    background-color: #daa52016;
+    color: #daa520;
+    border: 1px solid #daa520ac;
+    box-shadow:  0px 0px 15px -5px #daa520ac;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-right: auto;
+    width: fit-content;
     cursor: pointer;
     font-size: 15px;
+    height: 2.5rem;
 }
 
 form button:hover {
-    background-color: #a1a17f;
-    color: #55503e;
+    background-color: #222019;
+    color: #daa520;
+    box-shadow:  0px 0px 25px 0px #daa520;
 }
 
 
@@ -310,16 +340,9 @@ form button:hover {
 
     /* Header **************************************************/
 
-
-    header nav {
-        position: absolute;
-        right: 0;
-        width: 90%;
-    }
-
     #logo_link {
-        box-sizing: border-box;
-        margin: 2.5%;
+        margin-left: 3%;
+        width: 4.7%;
     }
 
 
@@ -327,8 +350,7 @@ form button:hover {
 
     main {
         padding: 1rem;
-        padding-bottom: 2rem;
-        padding-top: 0;
+        padding-bottom: 10rem;
         box-shadow: 0px 0px 25px -10px #daa520ac;
     }
 
@@ -398,8 +420,56 @@ form button:hover {
     /* Footer **************************************************/
 
     footer {
+        width: 125%;
+        left: -12.5%;
+
+    }
+    footer {
+        height: 5rem;
+        padding: 0.5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        box-sizing: border-box;
+        display: inline-block;
+        justify-content: center;
+        align-content: center; 
+        border-top: 1px #daa520ac solid;
         position: absolute;
-        left: -10vw;
-        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    footer form {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    form h2,
+    form h3 {
+        font-size: large;
+        margin: 0;
+        margin-left: 9rem;
+        margin-right: 1rem;
+        width: fit-content;
+        align-content: center;
+
+    }
+
+    form input {
+        padding: 0.5rem;
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: auto;
+    }
+
+    form button {
+        margin: 0;
+        margin-right: 10rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 15px;
     }
 }
