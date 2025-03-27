@@ -1,6 +1,6 @@
 html {
     background-color: #55503e;
-    color: #a1a17f;
+    color: #e8d6a0;
     font-size: 15px;
 }
 
@@ -26,24 +26,24 @@ body {
 header {
     background-color: #222019;
     display: flex;
+    margin: auto;
     height: 5rem;
     border-bottom: 1px #daa520ac solid;
     padding: 0;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
 }
 
 #logo_link {
     text-decoration: none;
-    width: 20%;
     align-self: center;
     margin: 1rem;
     box-sizing: border-box;
 }
 
 header nav {
-    color: #bbbb9d;
     width: 94%;
     align-self: center;
 }
@@ -64,39 +64,42 @@ ul li {
 }
 
 #current_page {
-    background-color: #55503e;
+    background-color: #55503ed6;
     cursor: auto;
-    color: #bbbb9d;
-    box-shadow: 0px 0px 15px 20px #222019 inset;
+    color: #e0e0b8;
+    box-shadow: 0px 0px 17px 17px #222019 inset;
 }
 
 ul a {
     text-decoration: none;
     font-size: 17px;
-    color: #bbbb9d;
+    color: #cfcf9b;
     display: block;
     width: 100%;
     line-height: 5rem;
     text-align: center;
+    background-color: #55503e48;
+    box-shadow: 0px 0px 20px 25px #222019 inset;
 }
 
 li a:hover {
-    background-color: hsla(0, 0%, 100%, 0.459);
+    background-color: hsla(0, 0%, 100%, 0.3);
     color: antiquewhite;
-    box-shadow: 0px 0px 15px 20px #222019 inset;
+    box-shadow: 0px 0px 17px 17px #222019 inset;
 }
 
 
 /* Main **************************************************/
 
 main {
-    background-color: hsla(0, 0%, 0%, 0.137);
+    background-color: hsla(0, 0%, 0%, 0.15);
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 3rem;
     min-height: calc(100vh - 9.8rem);
 }
+
 #index main {
     flex-direction: column;
     align-items: center;
@@ -121,13 +124,14 @@ h1 {
     width: 100vw;
     height: auto;
     margin-top: 5rem;
-    position:relative;
+    position: relative;
     bottom: 10%;
     box-shadow: 0px 0px 10px 0px #daa520ac;
 }
 
 #index p {
     margin: 5rem;
+    font-size: 17px;
     text-align: center;
 }
 
@@ -150,9 +154,9 @@ section {
     box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.5);
 }
 
-section h2 {
-    width: 100%;
-    margin-left: 1rem;
+#contact h2,
+#products h2 {
+    display: none;
 }
 
 section img {
@@ -169,15 +173,15 @@ article {
     box-sizing: border-box;
 }
 
-#odd {
+.odd {
     border-bottom: 2px #daa520ac double;
 }
 
-#last_odd {
+.last_odd {
     border-bottom: 2px #daa520ac double;
 }
 
-#even {
+.even {
     border-bottom: 2px #daa520ac double;
 }
 
@@ -236,7 +240,6 @@ aside p {
 
 footer {
     background-color: #222019;
-    position: relative;
     width: 100vw;
     min-height: 5rem;
     padding: 1.5rem;
@@ -259,27 +262,33 @@ footer form {
     font-size: 15px;
 }
 
+form h2,
 form h3 {
+    font-size: large;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    color: #a1a17f;
+    color: #cfcf9be1;
 }
 
 form input {
-    color: #a1a17f;
+    color: #cfcf9b;
     border-radius: 10px;
     background-color: #55503e;
-    border: 1px solid #a1a17f;
+    border: 1px solid #cfcf9be1;
     padding: 0.5rem;
     width: 100%;
     max-width: 400px;
     margin-bottom: 0.5rem;
 }
 
+::placeholder {
+    color: #cfcf9bb3;
+}
+
 form button {
-    color: #a1a17f;
+    color: #cfcf9be1;
     background-color: #55503e;
-    border: 1px solid #a1a17f;
+    border: 1px solid #cfcf9be1;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -301,18 +310,16 @@ form button:hover {
 
     /* Header **************************************************/
 
-    header {
-        width: 80%;
-    }
 
     header nav {
-        width: 85%;
         position: absolute;
         right: 0;
+        width: 90%;
     }
 
     #logo_link {
-        width: 6%;
+        box-sizing: border-box;
+        margin: 2.5%;
     }
 
 
@@ -332,13 +339,17 @@ form button:hover {
     }
 
     #index h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     #index main img {
         width: calc(100% - 2rem);
         height: auto;
         box-shadow: 0px 0px 10px 0px #daa520ac;
+    }
+
+    #index p {
+        font-size: 25px;
     }
 
     #main_paragraph {
@@ -356,16 +367,16 @@ form button:hover {
         box-sizing: border-box;
     }
 
-    #even {
+    .even {
         border-bottom: 1px #daa520ac solid;
     }
 
-    #odd {
+    .odd {
         border-right: 1px #daa520ac solid;
         border-bottom: 1px #daa520ac solid;
     }
 
-    #last_odd {
+    .last_odd {
         border-right: 1px #daa520ac solid;
         border-bottom: none;
     }
@@ -387,7 +398,8 @@ form button:hover {
     /* Footer **************************************************/
 
     footer {
-        width: 100%;
+        position: absolute;
+        left: -10vw;
         padding: 1.5rem;
     }
 }
