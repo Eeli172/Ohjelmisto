@@ -2,7 +2,6 @@ html {
     background-color: #55503e;
     color: #a1a17f;
     font-size: 15px;
-    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -14,7 +13,14 @@ body {
     margin: auto;
     min-height: 100vh;
     position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
+/* header and nav */
 
 header {
     background-color: #222019;
@@ -53,7 +59,7 @@ nav ul {
 
 ul li {
     width: calc(100% / 3);
-    margin: 0
+    margin: 0;
 }
 
 #current_page {
@@ -79,13 +85,21 @@ li a:hover {
     box-shadow: 0px 0px 15px 20px #222019 inset;
 }
 
+
+/* main */
+
 main {
     background-color: hsla(0, 0%, 0%, 0.137);
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 12rem;
-    min-height: calc(100vh - 11rem);
+    padding-bottom: 3rem;
+    min-height: calc(100vh - 9.8rem);
+}
+#index main {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
 }
 
 h1 {
@@ -105,29 +119,30 @@ h1 {
 #index main img {
     width: 100vw;
     height: auto;
-    margin: auto;
+    margin-top: 5rem;
+    position:relative;
+    bottom: 10%;
     box-shadow: 0px 0px 10px 0px #daa520ac;
-    position: absolute;
-    top: 30%;
+}
+
+#index p {
+    margin: 5rem;
+    text-align: center;
 }
 
 #main_paragraph {
     margin: 2rem;
-    margin-top: 0;
-}
-
-#index p {
+    margin-top: auto;
+    margin-bottom: 3rem;
+    align-self: center;
     text-align: center;
-    margin: 6rem;
-    position: relative;
-    top: 3rem;
 }
 
 section {
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: 0.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -153,21 +168,6 @@ article {
     box-sizing: border-box;
 }
 
-#contact section {
-    width: 100%;
-}
-
-#contact figure {
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
-
-#contact p {
-    text-align: center;
-    margin: 2rem;
-}
-
 #odd {
     border-bottom: 2px #daa520ac double;
 }
@@ -178,6 +178,30 @@ article {
 
 #even {
     border-bottom: 2px #daa520ac double;
+}
+
+#contact article {
+    padding-top: 0;
+}
+
+#contact section {
+    width: 100%;
+}
+
+#contact figure {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#contact p {
+    text-align: center;
+}
+
+#contact article h3 {
+    text-align: center;
+    margin-top: 3rem;
 }
 
 figure {
@@ -206,38 +230,66 @@ aside p {
     margin-top: 2rem;
 }
 
+
+/* footer */
+
 footer {
     background-color: #222019;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100vw;
-    min-height: 7rem;
-    padding: 1rem;
+    min-height: 5rem;
+    padding: 1.5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
     align-items: center;
     border-top: 1px #daa520ac solid;
 }
 
 footer form {
     width: 100%;
+    max-width: 600px;
     margin: auto;
     display: flex;
-    font-size: 15px;
+    flex-direction: column;
     align-items: center;
+    font-size: 15px;
 }
 
 form h3 {
-    position: relative;
-    left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #a1a17f;
 }
 
 form input {
     color: #a1a17f;
     border-radius: 10px;
     background-color: #55503e;
-    max-width: 60%
+    border: 1px solid #a1a17f;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0.5rem;
 }
+
+form button {
+    color: #a1a17f;
+    background-color: #55503e;
+    border: 1px solid #a1a17f;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+form button:hover {
+    background-color: #a1a17f;
+    color: #55503e;
+}
+
 
 @media screen and (min-width: 769px) {
 
@@ -245,9 +297,11 @@ form input {
         width: 80%;
     }
 
+
+    /* Header */
+
     header {
         width: 80%;
-        border-radius: 0 0 3px 3px;
     }
 
     header nav {
@@ -256,15 +310,17 @@ form input {
         right: 0;
     }
 
-
     #logo_link {
         width: 6%;
     }
 
 
+    /* Main */
+
     main {
         padding: 1rem;
-        padding-bottom: 10rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
         box-shadow: 0px 0px 25px -10px #daa520ac;
     }
 
@@ -274,14 +330,8 @@ form input {
         flex-wrap: wrap;
     }
 
-    #h1 {
-        text-align: left;
-        margin-left: 2rem;
-    }
-
     #index h1 {
         font-size: 40px;
-        text-align: center;
     }
 
     #index main img {
@@ -290,32 +340,18 @@ form input {
         box-shadow: 0px 0px 10px 0px #daa520ac;
     }
 
-    #index p {
-        text-align: center;
-        margin: 6rem;
+    #main_paragraph {
         font-size: 20px;
     }
 
     section {
-        width: 77.3%;
-        margin: 0rem;
+        width: 80%;
+        margin: auto;
     }
 
     article {
         padding: 1rem;
         width: 100%;
-        box-sizing: border-box;
-    }
-
-    #products article {
-        width: 50%;
-    }
-
-    aside {
-        width: 20%;
-        margin: 0;
-        margin-left: 1rem;
-        padding-right: 1%;
         box-sizing: border-box;
     }
 
@@ -333,29 +369,24 @@ form input {
         border-bottom: none;
     }
 
+    #products article {
+        width: 50%;
+    }
+
+    aside {
+        width: calc(20% - 1rem);
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: auto;
+        padding-right: 1%;
+        box-sizing: border-box;
+    }
+
+
+    /* Footer */
+
     footer {
-        border-radius: 2px 2px 0 0;
         width: 100%;
+        padding: 1.5rem;
     }
-
-    footer form {
-        width: 100%;
-        margin: auto;
-        display: flex;
-        font-size: 15px;
-        align-items: center;
-    }
-
-    form h3 {
-        position: relative;
-        left: 1rem;
-    }
-
-    form input {
-        color: #a1a17f;
-        border-radius: 10px;
-        background-color: #55503e;
-        max-width: 60%
-    }
-
 }
