@@ -50,7 +50,7 @@ header nav {
 }
 
 nav ul {
-    width: 85%;
+    width: 75%;
     list-style-type: none;
     justify-content: space-evenly;
     align-items: center;
@@ -206,6 +206,7 @@ article {
 
 #contact p {
     text-align: center;
+    text-decoration: none;
 }
 
 #contact article h3 {
