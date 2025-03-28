@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <h1>Results</h1>
+    <h2>Font</h2>
+    <p>Font is from <a
+            href="https://fonts.google.com/share?selection.family=Rubik:ital,wght@0,300..900;1,300..900">Google Fonts.
+            Name: Rubik</a></p>
+    <p>- Embedded following code in the &lt;head&gt; (HTML)</p>
+    <pre>
+        &lt;head&gt;
+            &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+            &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+            &lt;link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,400&display=swap" rel="stylesheet"&gt;
+            ...
+            ...
+            ...
+        &lt;/head&gt;
+    </pre>
+    <p>- Added following into .container (CSS)</p>
+    <pre>
+        .container {
+            font-family: "Rubik", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 400;
+            ...
+            ...
+            ...
+        }
+    </pre>
+
+    <h2>Validation</h2>
+    <p>index.html</p>
+    <img src="image/results/validator_index.jpg" width="1400" alt="index_validation_img">
+    <p>products.html</p>
+    <img src="image/results/validator_products.jpg" width="1400" alt="products_validation_img">
+    <p>contact.html</p>
+    <img src="image/results/validator_contact.jpg" width="1400" alt="contact_validation_img">
+
+    <h2>Lighthouse</h2>
+    <p>index.html</p>
+    <img src="image/results/lighthouse_index.jpg" alt="index_lighthouse_img">
+    <p>products.html</p>
+    <img src="image/results/lighthouse_products.jpg" alt="products_lighthouse_img">
+    <p>contact.html</p>
+    <img src="image/results/lighthouse_contact.jpg" alt="contact_lighthouse_img">
+
+    <h2>Contrast</h2>
+    <p>Kurssin videolla annettu linkki <q><a
+                href="https://color.a11y.com/Contrast/">https://color.a11y.com/Contrast/</a></q> ohjasi eri sivulle kun
+        videolla näytettiin. En saanut tuolta mitään järkevää niin etsin Googlesta eri contrast-checkereitä ja päädyin
+        Chromen laajennukseen <q><a
+                href="https://chromewebstore.google.com/detail/color-contrast-checker-by/hfcoldjibhgbnlambdiecfneiegagkhi?pli=1&authuser=1">Color
+                Contrast Checker by DigitalA11Y</a></q></p>
+    <p>index.html</p>
+    <img src="image/results/contrast_index.jpg" width="1400" alt="index_contrast_img">
+
 </body>
+
 </html>

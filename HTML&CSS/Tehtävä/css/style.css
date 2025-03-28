@@ -1,10 +1,8 @@
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
-}
-
-body {
     background-color: #55503e;
     color: #e8d6a0;
     font-size: 15px;
@@ -12,13 +10,13 @@ body {
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
     position: relative;
     box-sizing: border-box;
 }
@@ -132,7 +130,6 @@ h1 {
     width: calc(100% - 2rem);
     height: auto;
     margin: 5rem auto 0 auto;
-
     box-shadow: 0px 0px 10px 0px #daa520ac;
 }
 
@@ -287,7 +284,7 @@ form input {
     color: #daa520;
     font-size: 14px;
     border: 1px solid #daa520ac;
-    box-shadow:  0px 0px 15px -5px #daa520ac;
+    box-shadow: 0px 0px 15px -5px #daa520ac;
     border-radius: 20px;
     margin: 0;
     margin-top: 0.5rem;
@@ -297,9 +294,9 @@ form input {
     width: 11rem;
 }
 
-input:focus{
+input:focus {
     background-color: #222019;
-    box-shadow:  0px 0px 25px 0px #daa520;
+    box-shadow: 0px 0px 25px 0px #daa520;
 }
 
 ::placeholder {
@@ -311,7 +308,7 @@ form button {
     background-color: #daa52016;
     color: #daa520;
     border: 1px solid #daa520ac;
-    box-shadow:  0px 0px 15px -5px #daa520ac;
+    box-shadow: 0px 0px 15px -5px #daa520ac;
     box-sizing: border-box;
     border-radius: 4px;
     margin: 0;
@@ -327,7 +324,7 @@ form button {
 form button:hover {
     background-color: #222019;
     color: #daa520;
-    box-shadow:  0px 0px 25px 0px #daa520;
+    box-shadow: 0px 0px 25px 0px #daa520;
 }
 
 
@@ -362,12 +359,6 @@ form button:hover {
 
     #index h1 {
         font-size: 50px;
-    }
-
-    #index main img {
-        width: calc(100% - 2rem);
-        height: auto;
-        box-shadow: 0px 0px 10px 0px #daa520ac;
     }
 
     #index p {
@@ -422,20 +413,10 @@ form button:hover {
     footer {
         width: 125%;
         left: -12.5%;
-
-    }
-    footer {
         height: 5rem;
         padding: 0.5rem;
         padding-right: 2rem;
         padding-left: 2rem;
-        box-sizing: border-box;
-        display: inline-block;
-        justify-content: center;
-        align-content: center; 
-        border-top: 1px #daa520ac solid;
-        position: absolute;
-        bottom: 0;
     }
 
     footer form {
@@ -443,18 +424,14 @@ form button:hover {
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: center;
     }
 
     form h2,
     form h3 {
-        font-size: large;
         margin: 0;
         margin-left: 9rem;
         margin-right: 1rem;
-        width: fit-content;
         align-content: center;
-
     }
 
     form input {
