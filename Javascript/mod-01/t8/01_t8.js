@@ -1,10 +1,17 @@
-// Write a program that prompts the user for the start and end year. The program prints all leap years from the interval given by the user. Printing is done in an unordered list to the HTML document. (3p)
-// 
-// Example output HTML code:
-// <ul>
-//    <li>1992</li>
-//    <li>1996</li>
-//    <li>2000</li>
-//    <li>2004</li>
-//    <li>2008</li>
-// </ul>
+'use strict';
+
+const start_year = prompt("Start year:")
+const end_year = prompt("End year:")
+
+for (let i=start_year; i <= end_year; i++) { // for loop to iterate the given years
+    if (i % 4 === 0) { // if current year is divisible by 4
+        if (i % 100 === 0 && i % 400 !== 0) { // if current year is divisible by 100 and not by 400 (to exclude those from leap years)
+        }
+        else { // leap years
+            const li_element = document.createElement("li"); // create a new <li> element
+            li_element.appendChild(document.createTextNode(i)); // add the leap year to the <li> element
+            const ul_element = document.getElementById("leap"); // get the <ul> element by id
+            ul_element.appendChild(li_element); // add the <li> element to the <ul> element
+        }
+    }
+}

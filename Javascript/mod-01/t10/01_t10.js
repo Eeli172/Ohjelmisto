@@ -10,3 +10,7 @@
 //      test values:
 //          2 dice, sum 7, probability is about 15-17%
 //          3 dice, sum 15, probability is about 5%
+
+
+'use strict';
+
