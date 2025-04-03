@@ -4,7 +4,6 @@ const dice_amount = +prompt("Give the amount of dices to throw: ")
 const result_wanted = +prompt("Give the sum of the eye numbers you want from the dice(s): ")
 const loop_times = 10000
 let correct = 0
-let result = 0
 let result_total
 
 for (let i = 0; i < loop_times; i++) {
