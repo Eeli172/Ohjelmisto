@@ -1,40 +1,39 @@
-/*
-Write a voting program as described below for small-scale meeting use. (8p)
-    The program asks for the number of candidates.
-    Then the program asks for the names of the candidates: 'Name for candidate 1
-    Store the candidates' names and initial vote count in objects like this:
-[
-    {
-        name: 'ellie',
-        votes: 0,
-    },
-    {
-        name: 'frank',
-        votes: 0,
-    },
-    {
-        name: 'pamela',
-        votes: 0,
-    },
-]
-    The program asks for the number of voters.
-    The program asks each voter in turn who they will vote for. 
-        Voter shoud enter candidate name. 
-        If the voter enters an empty value instead of the voting number, 
-        it will be interpreted as an empty vote.
 
-    The program announces the name of the winner and the results by printing it to the console:
-The winner is pamela with 3 votes.
-results:
-pamela: 3 votes
-frank: 1 votes
-ellie: 1 votes
+'use strict';
+const candidates_amount = +prompt("Give the amount of participants:")
+let candidates = []
 
-    Some help:
-// You need to compare votes so console log a and b to see how to get the correct property.
-someArray.sort((a, b) => {
-   console.log(a, b);
-   return b - a;
-});
+for (let i = 0; i < candidates_amount; i++) {
+    candidates.push({name: prompt(`Name for candidate ${i+1}:`), votes: 0});    
+}
 
-*/ 
+
+
+
+const voters_amount = +prompt("Give the amount of voters:")
+let candidates_string = ""
+
+let vote
+for (let i = 0; i < voters_amount; i++) {
+    candidates_string = `VOTER NUMBER:  [ ${i+1} ]\n\nCANDIDATES:`
+    for (let j = 0; j < candidates.length; j++) {
+        candidates_string += `\n[ ${j+1} ] - ${candidates[j].name}`
+    }
+    candidates_string += "\n\nENTER THE NUMBER OF CANDIDATE TO VOTE:"
+    vote = +prompt(candidates_string)
+    if (0 < vote < candidates.length){
+        candidates[vote-1].votes +=1
+    }
+
+}
+
+
+
+
+candidates.sort(function(a, b){return b.votes - a.votes});
+
+console.log(`The winner is ${candidates[0].name} with ${candidates[0].votes} votes.\nresults:`)
+
+for (let i = 0; i < candidates.length; i++) {
+    console.log(`${candidates[i].name}: ${candidates[i].votes} votes`)
+}
