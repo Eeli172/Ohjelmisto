@@ -1,4 +1,15 @@
-/*
-Write a program that asks the user for the number of participants. After this, the program asks for the names of all participants. Finally, the program prints the names of the participants on the web page in an ordered list (<ol>) in alphabetical order. (2p)
+'use strict';
 
-*/ 
+const participants = +prompt("Give the number of participants:")
+
+const names = [];
+
+for (let i = 0; i < participants; i++) {
+    names[i] = prompt(`Give ${i+1}. name:`)
+}
+
+names.sort();
+
+for (let i = 0; i < participants; i++) {
+    document.querySelector('#tehtava').innerHTML += "<li>" + names[i] + "</li>"
+}
