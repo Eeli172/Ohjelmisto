@@ -2,8 +2,8 @@
 
 function concat(array) {
     let string = "";
-    for (let i = 0; i < array.length; i++) {
-        string += array[i];
+    for (let i of array) {
+        string += i;
     };
     return string;
 };
