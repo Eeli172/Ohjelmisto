@@ -1,4 +1,3 @@
-
 'use strict';
 const candidates_amount = +prompt("Give the amount of participants:")
 let candidates = []
@@ -6,8 +5,6 @@ let candidates = []
 for (let i = 0; i < candidates_amount; i++) {
     candidates.push({name: prompt(`Name for candidate ${i+1}:`), votes: 0});    
 }
-
-
 
 
 const voters_amount = +prompt("Give the amount of voters:")
@@ -26,8 +23,6 @@ for (let i = 0; i < voters_amount; i++) {
     }
 
 }
-
-
 
 
 candidates.sort(function(a, b){return b.votes - a.votes});
