@@ -1,5 +1,9 @@
-/*
-Develop the app further.
-    Add JavaScript that gets the value entered to the form and sends a request with fetch to https://api.tvmaze.com/search/shows?q=${value_from_input}. Print the search result to the console. (3p)
+'use strict';
 
-*/ 
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const query = document.getElementById('query').value;
+  fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+});
