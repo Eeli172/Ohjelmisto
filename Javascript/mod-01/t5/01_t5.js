@@ -1,17 +1,25 @@
-// Write a program that asks the user to enter a year and notifies the user whether the input year is a leap year. 
-// A year is a leap year if it is divisible by four. However, years divisible by 100 are leap years only if they are also divisible by 400. 
-// Print the result on the HTML document.
-
 'use strict';
 
-const year = prompt("Enter a year:")
+const year = +prompt("Enter a year:")
+let bool = false
 
 
 if (year % 4 === 0) {
-    if (year % 100 === 0 && year % 400 !== 0) {
-        document.querySelector('#leap').innerHTML = `The year ${year} isn't a leap year.`;
+    if (year % 100 === 0) {
+        if (year % 400 === 0) {
+            bool = true
+        }
     }
     else {
-        document.querySelector('#leap').innerHTML = `The year ${year} is a leap year.`;
+        bool = true
     }
+}
+
+switch (bool) {
+    case true:
+        document.querySelector('#leap').innerHTML = `${year} is a leap year`
+        break;
+    case false:
+        document.querySelector('#leap').innerHTML = `${year} is not a leap year`
+        break;
 }

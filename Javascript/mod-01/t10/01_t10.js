@@ -1,20 +1,19 @@
 'use strict';
 
-const dice_amount = +prompt("Give the amount of dices to throw: ")
-const result_wanted = +prompt("Give the sum of the eye numbers you want from the dice(s): ")
-const loop_times = 10000
-let correct = 0
-let result_total
+let dices = +prompt("Give an amount of dices:")
+let sum_wanted = +prompt("Give the sum you want to get from the dices:")
+const iterations = 10000
+let times = 0
+let sum
 
-for (let i = 0; i < loop_times; i++) {
-    result_total = 0
-    for (let j = 0; j < dice_amount; j++) {
-        result_total += Math.floor(Math.random() * 6) + 1
+for (let i = 0; i < iterations; i++) {
+    sum = 0
+    for (let j = 0; j < dices; j++) {
+        sum += (Math.floor(Math.random()*6)+1)
     }
-    if (result_total === result_wanted) {
-        correct++
+    if (sum === sum_wanted) {
+        times++
     }
-}
+};
 
-let probability = (correct / loop_times * 100).toFixed(2)
-document.querySelector('#dice').innerHTML = `Probability to get sum ${result_wanted} with ${dice_amount} dice is ${probability}%`
+document.querySelector('#dice').innerHTML = `Probability to get sum ${sum_wanted} with ${dices} dice is ${(times/iterations*100).toFixed(2)}%`

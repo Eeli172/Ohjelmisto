@@ -1,15 +1,6 @@
 'use strict';
+const first = prompt("1st num:")
+const second = prompt("2nd num:")
+const third = prompt("3rd num:")
 
-const first = +prompt("Give 1. integer");
-const second = +prompt("Give 2. integer");
-const third = +prompt("Give 3. integer");
-
-const sum =  first + second + third
-const product = first * second * third
-const avg = (first + second + third) / 3
-
-document.querySelector('#sum').innerHTML = `Sum of given numbers: ${sum}`;
-document.querySelector('#product').innerHTML = `Product of given numbers: ${product}`;
-document.querySelector('#avg').innerHTML = `Average of given numbers: ${avg}`;
-
-
+document.querySelector('#sum').innerHTML = `Sum: ${first + second + third}, Product: ${first * second * third}, Average: ${(first + second + third) / 3}`

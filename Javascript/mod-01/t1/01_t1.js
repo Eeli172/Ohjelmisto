@@ -1,2 +1,2 @@
 'use strict';
-console.log("I'm printing this console!");
+console.log("I'm printing to console!")

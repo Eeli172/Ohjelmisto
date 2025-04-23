@@ -111,8 +111,8 @@ for (let pic of picArray) {
   const figcaption = document.createElement("figcaption");
   const figText = document.createTextNode(pic["caption"]);
   figcaption.appendChild(figText);
-  figure.appendChild(figcaption);
   figure.appendChild(img);
+  figure.appendChild(figcaption);
   article.appendChild(figure);
   
 
@@ -120,4 +120,19 @@ for (let pic of picArray) {
   const pText = document.createTextNode(pic["description"]);
   p.appendChild(pText);
   article.appendChild(p);
+
+  article.addEventListener('click', function() {
+    const dialog = document.querySelector('dialog');
+    const dialogImg = dialog.querySelector('img');
+    dialogImg.src = pic["image"]["large"];
+    dialogImg.alt = pic["title"];
+    dialog.showModal();
+  });
 }
+  
+const dialog = document.querySelector('dialog');
+const closeModal = dialog.querySelector('span');
+closeModal.addEventListener('click', function() {
+  dialog.close();
+});
+  

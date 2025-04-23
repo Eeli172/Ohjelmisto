@@ -1,9 +1,19 @@
-/* 
-Open t2 folder in your IDE/editor. Add HTML by using createElement() and appenChild mehtods. (2p)
-    Add the following HTML code to the element with id="target"
-<li>First item</li>
-<li>Second item</li>
-<li>Third item</li>
-    Add class my-item to the second list item
+'use strict';
 
-*/
+const div = document.querySelector('#target');
+
+const t1 = document.createTextNode('First item');
+const t2 = document.createTextNode('Second item');
+const t3 = document.createTextNode('Third item');
+
+const p1 = document.createElement('li');
+const p2 = document.createElement('li');
+const p3 = document.createElement('li');
+
+p1.appendChild(t1);
+p2.appendChild(t2);
+p3.appendChild(t3);
+
+div.appendChild(p1);
+div.appendChild(p2);
+div.appendChild(p3);

@@ -1,7 +1,27 @@
-/* 
-Open t8 folder in your IDE/editor. Make a simple calculator. (4p)
-    There are two input fields where user enters numbers. Based on the drop-down list, calculator performs addition, subtraction, multiplication or division of these two numbers.
-    Use the value attribute of <option> elements to decide which operation the calculator needs to do. Example.
-    Show the result in <p id="result"> when the button is clicked.
+'use strict';
 
-*/
+document.querySelector("#start").addEventListener('click', function() {
+    const num1 = +document.querySelector('input[id=num1]').value;
+    const num2 = +document.querySelector('input[id=num2]').value;
+    const p = document.querySelector('#result');
+    const operation = document.querySelector('#operation').value;
+
+    switch (operation) {
+        case 'add':
+            p.innerHTML = `The result is: ${num1 + num2}`
+            break;
+
+        case 'sub':
+            p.innerHTML = `The result is: ${num1 - num2}`
+            break;
+
+        case 'multi':
+            p.innerHTML = `The result is: ${num1 * num2}`
+            break;
+
+        case 'div':
+            p.innerHTML = `The result is: ${num1 / num2}`
+            break;
+
+    }
+})

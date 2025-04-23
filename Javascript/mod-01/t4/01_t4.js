@@ -1,21 +1,18 @@
 'use strict';
 
-const student_name = prompt("Give your name: ")
+const random = Math.random()
 
-let result;
-result = Math.floor(Math.random()*4)+1;
+const user = prompt("Tell me your name.")
 
-switch (result) {
-    case 1:
-        document.querySelector('#sorting_hat').innerHTML = `${student_name}, you are Gryffindor.`;
-        break;
-    case 2:
-        document.querySelector('#sorting_hat').innerHTML = `${student_name}, you are Slytherin.`;
-        break;
-    case 3:
-        document.querySelector('#sorting_hat').innerHTML = `${student_name}, you are Hufflepuff.`;
-        break;
-    case 4:
-        document.querySelector('#sorting_hat').innerHTML = `${student_name}, you are Ravenclaw.`;
-        break;
+if (random<0.25){
+    document.querySelector('#target').innerHTML = `${user}, you're Gryffindor`
+}
+else if (random<0.5){
+    document.querySelector('#target').innerHTML = `${user}, you're Slytherin`
+}
+else if (random<0.75){
+    document.querySelector('#target').innerHTML = `${user}, you're Hufflepuff`
+}
+else {
+    document.querySelector('#target').innerHTML = `${user}, you're Ravenclaw`
 }

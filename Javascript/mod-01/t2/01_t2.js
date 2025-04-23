@@ -1,5 +1,6 @@
 'use strict';
 
-const user_name = prompt("Give your name:")
 
-document.querySelector('#name').innerHTML = 'Hello, ' + user_name + '!';
+const username = prompt("What's your name?");
+
+document.querySelector('#name').innerHTML = `Hello, ${username}`
